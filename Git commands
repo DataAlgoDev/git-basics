@@ -1,0 +1,10 @@
+Git commands
+------------
+1. git init (to initialize the selected folder as git working directory)
+2. git status (Shows status)
+3. git add <file> (To add file to staging area)
+
+# Create user config before commiting files
+4.git config --global user.email "ajaynarayanan11@gmail.com"
+5.git config --global user.name "AjayN"\
+6.
