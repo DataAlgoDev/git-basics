@@ -1,10 +1,22 @@
 Git commands
 ------------
-1. git init (to initialize the selected folder as git working directory)
-2. git status (Shows status)
-3. git add <file> (To add file to staging area)
+# Setup and startup
+
+git init : to initialize the selected folder as git working directory
+git status : Shows status of working tree
+
+# Adding files to staging area (index file)
+
+git add <file> : To add file to staging area
+git add . : To add all files in the directory to staging area
 
 # Create user config before commiting files
-4.git config --global user.email "ajaynarayanan11@gmail.com"
-5.git config --global user.name "AjayN"\
-6.
+
+git config --global user.email "ajaynarayanan11@gmail.com"
+git config --global user.name "AjayN"\
+
+#Commiting files (Adding files to object folder)
+
+git log : to view commit history. (q to exit)
+git show : to see details about a specific commit, including what changes were made.
+
