@@ -1,9 +1,7 @@
-Detatched Head : When you go to a specific previous commit id, head becomes a detached head
-To save the changes if switching to a different branch, create branch with that detatched head id and then merge
-
 # -----------
 Git commands
 # -----------
+
 # Setup and startup
 
 git init : to initialize the selected folder as git working directory
@@ -67,3 +65,12 @@ git reset --soft HEAD~1 : Soft resetting current branch head back to one last co
 
 git branch -d <branches name space seperated>: Only allows removal of branch if that branch is already merged to master
 git branch -D <branches name space seperated>: Force delete even if it is not merged
+
+# Detatched head
+
+Detatched Head : When you go to a specific previous commit id, head becomes a detached head
+To save the changes if switching to a different branch, create branch with that detatched head id and then merge
+
+# Git Ignore
+
+To ignore any file / that need not to be tracked by git, create .gitignore file and add the list of files to be ignored inside of it
