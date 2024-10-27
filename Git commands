@@ -27,3 +27,8 @@ git checkout master : switches back to master branch
 git branch : To list all the branches
 git branch <branch-name> :  To create new branch
 git branch -b <branch-name> : Create new branch and switch to that branch
+
+# Merging a branch to another
+
+git checkout <target branch> : Switch to target branch to which it be merged
+git merge <branch-name> : Name of the branch to be merged
