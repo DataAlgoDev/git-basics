@@ -32,3 +32,9 @@ git branch -b <branch-name> : Create new branch and switch to that branch
 
 git checkout <target branch> : Switch to target branch to which it be merged
 git merge <branch-name> : Name of the branch to be merged
+
+
+# Deleting files
+
+git ls-files : To list the files present in staging area
+git rm <file-name> :  To remove file from direcory and staging area
