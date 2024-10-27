@@ -22,6 +22,7 @@ git commit -a -m "" : Adds files to staging area if not already added and then c
 # Git logs
 git log : to view commit history. (q to exit)
 git show : to see details about a specific commit, including what changes were made.
+git reflog :  Shows all activity of the head with its hash value in the current working branch
 
 # Checkout / branching
 
@@ -57,3 +58,8 @@ git clean -df :  Force cleanup without showing details
 # Git reset
 
 git reset --soft HEAD~1 : Soft resetting current branch head back to one last commit
+
+# Deleting branches
+
+git branch -d : Only allows removal of branch if that branch is already merged to master
+git branch -D : Force delete even if it is not merged
