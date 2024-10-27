@@ -15,8 +15,11 @@ git add . : To add all files in the directory to staging area
 git config --global user.email "ajaynarayanan11@gmail.com"
 git config --global user.name "AjayN"
 
-#Commiting files (Adding files to object folder)
+# Commiting files (Adding files to object folder, or saving)
+git commit -m "<message>" : Saves all the staged files(files that are being tracked in the index area)
+git commit -a -m "" : Adds files to staging area if not already added and then commits the change
 
+# Git logs
 git log : to view commit history. (q to exit)
 git show : to see details about a specific commit, including what changes were made.
 
@@ -38,3 +41,19 @@ git merge <branch-name> : Name of the branch to be merged
 
 git ls-files : To list the files present in staging area
 git rm <file-name> :  To remove file from direcory and staging area
+
+# To revert the changes in staged files which was not commited
+
+git checkout <file-name> | git restore <file>: To revert specific file
+git checkout . | git restore . : To revert all the changes in file to last commit
+
+git restore : if file was staged already then  do 'git checkout'
+
+# Git cleanup
+
+git clean -dn : Shows Cleans up details
+git clean -df :  Force cleanup without showing details
+
+# Git reset
+
+git reset --soft HEAD~1 : Soft resetting current branch head back to one last commit
