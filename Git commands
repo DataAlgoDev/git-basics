@@ -76,3 +76,10 @@ To save the changes if switching to a different branch, create branch with that 
 To ignore any file / that need not to be tracked by git, create .gitignore file and add the list of files to be ignored inside of it
 *.pdf :  Ignores all files with pdf format
 web-app/* : Ignores all files in the the folder including folder
+
+# ---------------Working with remote repository-----------------
+
+git remote add origin https://github.com/ajaynarayanan11/git-basics.git
+git branch -M main  # If want to rename the master to main
+git push -u origin main
+
