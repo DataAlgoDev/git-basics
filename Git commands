@@ -61,5 +61,5 @@ git reset --soft HEAD~1 : Soft resetting current branch head back to one last co
 
 # Deleting branches
 
-git branch -d : Only allows removal of branch if that branch is already merged to master
-git branch -D : Force delete even if it is not merged
+git branch -d <branches name space seperated>: Only allows removal of branch if that branch is already merged to master
+git branch -D <branches name space seperated>: Force delete even if it is not merged
