@@ -13,10 +13,17 @@ git add . : To add all files in the directory to staging area
 # Create user config before commiting files
 
 git config --global user.email "ajaynarayanan11@gmail.com"
-git config --global user.name "AjayN"\
+git config --global user.name "AjayN"
 
 #Commiting files (Adding files to object folder)
 
 git log : to view commit history. (q to exit)
 git show : to see details about a specific commit, including what changes were made.
 
+# Checkout / branching
+
+git checkout <commit id> : switches to the branch at that time of commit
+git checkout master : switches back to master branch
+git branch : To list all the branches
+git branch <branch-name> :  To create new branch
+git branch -b <branch-name> : Create new branch and switch to that branch
