@@ -1,5 +1,5 @@
 ## Setup and Startup
-
+---
 *To initialize the selected folder as git working directory*
     
     git init 
@@ -22,7 +22,7 @@
 
 
 ## Working with remote repository
-
+---
 *To Check remote directory/repo*
 
     git remote -v
@@ -46,9 +46,8 @@
     git remote remove origin
 
 ## Branching, commits and more
-
-### Commiting files (Adding files to object folder, or saving)
 ---
+### Commiting files (Adding files to object folder, or saving)
 Saves all the staged files(files that are being tracked in the index area)
 
     git commit -m "<message>"
