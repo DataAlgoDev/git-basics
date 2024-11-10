@@ -2,8 +2,9 @@
 
 ## Setup and startup
 
-To initialize the selected folder as git working directory
-* git init 
+*To initialize the selected folder as git working directory*
+    
+    git init 
 
 Shows status of working tree
 git status
