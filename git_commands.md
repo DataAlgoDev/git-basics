@@ -142,8 +142,8 @@ Force delete even if it is not merged
 
 ### Detatched head
 
-**When you go to a specific previous commit id, head becomes a detached head.
-To save the changes if switching to a different branch, create branch with that detatched head id and then merge**
+*When you go to a specific previous commit id, head becomes a detached head.
+To save the changes if switching to a different branch, create branch with that detatched head id and then merge*
 
 # Git Ignore
 
