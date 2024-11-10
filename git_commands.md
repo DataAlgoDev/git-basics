@@ -3,7 +3,9 @@
 *To initialize the selected folder as git working directory*
     
     git init 
+*Rename master to main (As per new convention)*
 
+    git branch -M main
 *Shows status of working tree*
 
     git status
@@ -17,9 +19,28 @@
 *Create user config before commiting files*
 
     git config --global --list
-
     git config --global user.email "ajaynarayanan11@gmail.com"
     git config --global user.name "AjayN"
+
+
+## Working with remote repository
+
+*To Check remote directory/repo*
+
+    git remote -v
+*To add an repo Github as origin*
+
+    git remote add origin https://github.com/<repo_name>.git
+*Pulling an existing repo with unrelated commit history*
+    
+    git pull origin main --allow-unrelated-histories
+*For pushing changes to remote repo*
+    
+    git push -u origin main
+*Or, both are the same*
+
+    git push --set-upstream origin main
+git remote remove origin
 
 
 # Commiting files (Adding files to object folder, or saving)
@@ -81,12 +102,6 @@ To save the changes if switching to a different branch, create branch with that 
 To ignore any file / that need not to be tracked by git, create .gitignore file and add the list of files to be ignored inside of it
 *.pdf :  Ignores all files with pdf format
 web-app/* : Ignores all files in the the folder including folder
-
-# Working with remote repository
-
-git remote add origin https://github.com/ajaynarayanan11/git-basics.git
-git branch -M main                                                      # If want to rename the master to main
-git push -u origin main /  git push origin master
 
 
 ## =======================================
