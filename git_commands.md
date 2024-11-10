@@ -48,38 +48,59 @@
 ## Branching, commits and more
 ---
 ### Commiting files (Adding files to object folder, or saving)
-Saves all the staged files(files that are being tracked in the index area)
+*Saves all the staged files(files that are being tracked in the index area)*
 
     git commit -m "<message>"
-Adds files to staging area if not already added and then commits the change
+*Adds files to staging area if not already added and then commits the change*
 
     git commit -a -m "" : 
 ### Git logs
 ---
-git log : to view commit history. (q to exit)
-git show : to see details about a specific commit, including what changes were made.
-git reflog :  Shows all activity of the head with its hash value in the current working branch
+*To view commit history. (q to exit)*
 
-# Checkout / branching
+    git log 
+To see details about a specific commit, including what changes were made.
+    
+    git show 
+*Shows all activity of the head with its hash value in the current working branch*
 
-git checkout <commit id> : switches to the branch at that time of commit
-git checkout master : switches back to master branch
-git branch : To list all the branches
-git branch <branch-name> :  To create new branch
-git branch -b <branch-name> : Create new branch and switch to that branch
+    git reflog
 
-# Merging a branch to another
+### Checkout / branching
 
-git checkout <target branch> : Switch to target branch to which it be merged
-git merge <branch-name> : Name of the branch to be merged
+*Switches to the branch at that time of commit*
 
+    git checkout <commit id>
 
-# Deleting files
+*Switches back to master branch*
+
+    git checkout master
+*To list all the branches*
+
+    git branch -a
+*To create new branch*
+
+    git branch <branch-name>
+
+*Create new branch and switch to that branch*
+
+    git branch -b <branch-name>
+
+### Merging a branch to another
+
+*Switch to target branch to which it be merged*
+
+    git checkout <target branch>
+Name of the branch to be merged
+
+    git merge <branch-name>
+
+## Deleting files
 
 git ls-files : To list the files present in staging area
 git rm <file-name> :  To remove file from direcory and staging area
 
-# To revert the changes in staged files which was not commited
+## To revert the changes in staged files which was not commited
 
 git checkout <file-name> | git restore <file>: To revert specific file
 git checkout . | git restore . : To revert all the changes in file to last commit
