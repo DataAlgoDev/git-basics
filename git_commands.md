@@ -56,7 +56,7 @@
     git commit -a -m "" : 
 
 ### Git logs
----
+
 *To view commit history. (q to exit)*
 
     git log 
