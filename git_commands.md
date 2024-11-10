@@ -114,26 +114,36 @@ To remove file from direcory and staging already
 
     git checkout .
     git restore .
-**Note:If file was staged already then  do 'git checkout'**
+**Note : If file was staged already then  do 'git checkout'**
 
-# Git cleanup
+### Git cleanup
 
-git clean -dn : Shows Cleans up details
-git clean -df :  Force cleanup without showing details
+*Shows Cleans up details*
 
-# Git reset
+    git clean -dn 
+Force cleanup without showing details
 
-git reset --soft HEAD~1 : Soft resetting current branch head back to one last commit
+    git clean -df
 
-# Deleting branches
+### Git reset
 
-git branch -d <branches name space seperated>: Only allows removal of branch if that branch is already merged to master
-git branch -D <branches name space seperated>: Force delete even if it is not merged
+Soft resetting current branch head back to one last commits
 
-# Detatched head
+    git reset --soft HEAD~1
 
-Detatched Head : When you go to a specific previous commit id, head becomes a detached head
-To save the changes if switching to a different branch, create branch with that detatched head id and then merge
+### Deleting branches
+
+Only allows removal of branch if that branch is already merged to master
+
+    git branch -d <branches name space seperated>
+Force delete even if it is not merged
+
+    git branch -D <branches name space seperated>
+
+### Detatched head
+
+**When you go to a specific previous commit id, head becomes a detached head.
+To save the changes if switching to a different branch, create branch with that detatched head id and then merge**
 
 # Git Ignore
 
