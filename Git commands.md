@@ -1,9 +1,12 @@
-## Git commands
+# Git commands
 
-# Setup and startup
+## Setup and startup
 
-git init : to initialize the selected folder as git working directory
-git status : Shows status of working tree
+To initialize the selected folder as git working directory
+* git init 
+
+Shows status of working tree
+git status
 
 # Adding files to staging area (index file)
 
