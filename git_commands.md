@@ -9,13 +9,11 @@
 *Shows status of working tree*
 
     git status
-
 *Adding files to staging area (index file)*
 
     git add <file>
 
     git add .
-
 *Create user config before commiting files*
 
     git config --global --list
@@ -34,10 +32,10 @@
 *Pulling an existing repo with unrelated commit history*
     
     git pull origin main --allow-unrelated-histories
-*For pushing changes to remote repo*
+*For pushing changes to remote repo (Shorthand)*
     
     git push -u origin main
-*Or, both are the same*
+*Or, below is also the same*
 
     git push --set-upstream origin main
 *To remove master branch from origin if master was renamed to main and the main brach has been set Default in Github*
@@ -47,12 +45,18 @@
     
     git remote remove origin
 
+## Branching, commits and more
 
-# Commiting files (Adding files to object folder, or saving)
-git commit -m "<message>" : Saves all the staged files(files that are being tracked in the index area)
-git commit -a -m "" : Adds files to staging area if not already added and then commits the change
+### Commiting files (Adding files to object folder, or saving)
+---
+Saves all the staged files(files that are being tracked in the index area)
 
-# Git logs
+    git commit -m "<message>"
+Adds files to staging area if not already added and then commits the change
+
+    git commit -a -m "" : 
+### Git logs
+---
 git log : to view commit history. (q to exit)
 git show : to see details about a specific commit, including what changes were made.
 git reflog :  Shows all activity of the head with its hash value in the current working branch
