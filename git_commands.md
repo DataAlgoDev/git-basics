@@ -45,7 +45,7 @@
     
     git remote remove origin
 
-## Branching, commits and more
+## Branching, Logs, Commits, Merge and more
 ---
 ### Commiting files (Adding files to object folder, or saving)
 *Saves all the staged files(files that are being tracked in the index area)*
@@ -97,15 +97,24 @@ Name of the branch to be merged
 
 ## Deleting files
 
-git ls-files : To list the files present in staging area
-git rm <file-name> :  To remove file from direcory and staging area
+To list the files present in staging alreadyi
 
-## To revert the changes in staged files which was not commited
+    git ls-files
+To remove file from direcory and staging already
 
-git checkout <file-name> | git restore <file>: To revert specific file
-git checkout . | git restore . : To revert all the changes in file to last commit
+    git rm <file-name>
 
-git restore : if file was staged already then  do 'git checkout'
+### To revert the changes in staged files which was not commited
+
+*To revert specific file*
+
+    git checkout <file-name>
+    git restore <file>
+*To revert all the changes in file to last commit*
+
+    git checkout .
+    git restore .
+**Note:If file was staged already then  do 'git checkout'**
 
 # Git cleanup
 
