@@ -141,29 +141,29 @@ To remove file from direcory and staging already
 *Shows Cleans up details*
 
     git clean -dn 
-Force cleanup without showing details
+*Force cleanup without showing details*
 
     git clean -df
 
 ### Git reset
 
-Soft resetting current branch head back to one last commits
+*Soft resetting current branch head back to one last commits*
 
     git reset --soft HEAD~1
 
 ### Deleting branches
 
-Only allows removal of branch if that branch is already merged to master
+*Only allows removal of branch if that branch is already merged to master*
 
     git branch -d <branches name space seperated>
-Force delete even if it is not merged
+*Force delete even if it is not merged*
 
     git branch -D <branches name space seperated>
 
 ### Detatched head
 
-*When you go to a specific previous commit id, head becomes a detached head.
-To save the changes if switching to a different branch, create branch with that detatched head id and then merge*
+When you go to a specific previous commit id, head becomes a detached head.
+To save the changes if switching to a different branch, create branch with that detatched head id and then merge
 
 ### Git Ignore
 
