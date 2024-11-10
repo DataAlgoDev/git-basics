@@ -40,7 +40,12 @@
 *Or, both are the same*
 
     git push --set-upstream origin main
-git remote remove origin
+*To remove master branch from origin if master was renamed to main and the main brach has been set Default in Github*
+
+    git push origin --delete master
+*To remove remote repo link with the local direcory*
+    
+    git remote remove origin
 
 
 # Commiting files (Adding files to object folder, or saving)
