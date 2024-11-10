@@ -145,11 +145,13 @@ Force delete even if it is not merged
 *When you go to a specific previous commit id, head becomes a detached head.
 To save the changes if switching to a different branch, create branch with that detatched head id and then merge*
 
-# Git Ignore
+### Git Ignore
 
-To ignore any file / that need not to be tracked by git, create .gitignore file and add the list of files to be ignored inside of it
-*.pdf :  Ignores all files with pdf format
-web-app/* : Ignores all files in the the folder including folder
+*To ignore any file / that need not to be tracked by git, create .gitignore file and add the list of files to be ignored inside of it
+
+'*.pdf' :  Ignores all files with pdf format
+
+'web-app/*' : Ignores all files in the the folder including folder*
 
 
 ## =======================================
