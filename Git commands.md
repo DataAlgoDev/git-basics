@@ -1,6 +1,4 @@
-## ============
 ## Git commands
-## ============
 
 # Setup and startup
 
