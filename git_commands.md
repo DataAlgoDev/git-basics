@@ -54,14 +54,24 @@
 *Adds files to staging area if not already added and then commits the change*
 
     git commit -a -m "" : 
+
 ### Git logs
 ---
 *To view commit history. (q to exit)*
 
     git log 
 To see details about a specific commit, including what changes were made.
-    
+
     git show 
+    git show <id>
+*To See last commit*
+
+    git log -1
+
+*View differences between commits:*
+
+    git diff <commit-id1> <commit-id2>
+
 *Shows all activity of the head with its hash value in the current working branch*
 
     git reflog
@@ -116,6 +126,16 @@ To remove file from direcory and staging already
     git restore .
 **Note : If file was staged already then  do 'git checkout'**
 
+### Tagging Releases
+
+*Create a new tag*
+
+    git tag -a v1.0 -m "Version 1.0"
+
+*Push tags to remote*
+
+    git push origin --tags
+
 ### Git cleanup
 
 *Shows Cleans up details*
@@ -147,107 +167,9 @@ To save the changes if switching to a different branch, create branch with that 
 
 ### Git Ignore
 
-*To ignore any file / that need not to be tracked by git, create .gitignore file and add the list of files to be ignored inside of it
+To ignore any file that need not to be tracked by git, create .gitignore file and add the list of files to be ignored inside of it
 
-'*.pdf' :  Ignores all files with pdf format
+*.pdf :  Ignores all files with pdf format
 
-'web-app/*' : Ignores all files in the the folder including folder*
+web-app/* : Ignores all files in the the folder including folder
 
-
-## =======================================
-## Workflow of tracking an own new project
-## =======================================
-
-1. Create a Git Repository
---------------------------
-#Initialize a new Git repository:
-git init
-
-#Clone an existing repository:
-git clone <repository-url>
-
-2. Set Up Your Identity
------------------------
-# Configure your username and email (if not already set):
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
-
-3. Create and Manage Files
----------------------------
-# Check the status of your repository:
-git status
-
-# Add files to the staging area:
-git add <file-name>  # For a specific file
-git add .            # For all changes
-
-# Remove files from the staging area:
-git reset <file-name>
-
-4. Committing Changes
----------------------
-# Commit your changes:
-git commit -m "Your commit message"
-
-5. Branching and Merging
-------------------------
-# Create a new branch:
-git checkout -b <branch-name>
-
-# Switch to an existing branch:
-git checkout <branch-name>
-
-# Merge a branch into the current branch:
-git merge <branch-name>
-
-# Delete a branch:
-git branch -d <branch-name>
-
-6. Remote Repository Management
--------------------------------
-# Add a remote repository:
-git remote add origin <repository-url>
-
-# Pull changes from a remote repository (suppose there are some readme files in ur new repo):
-git pull origin <branch-name>
-
-# Push changes to a remote repository:
-git push origin <branch-name>
-
-# Fetch changes from a remote repository:
-git fetch origin
-
-7. Viewing History and Differences
-----------------------------------
-# To see commit log
-git log
-
-# To See last commit
-git log -1
-
-#View differences between commits:
-git diff <commit-id1> <commit-id2>
-
-8. Tagging Releases
--------------------
-# Create a new tag:
-git tag -a v1.0 -m "Version 1.0"
-
-#Push tags to remote:
-git push origin --tags
-
-9. Cleaning Up
----------------
-# Remove untracked files:
-git clean -f
-
-#Reset to a previous commit (WARNING: This can lose changes):
-git reset --hard <commit-id>
-
-10. End of Project
-------------------
-# Archive the repository (optional):
-You can create a zip of the repository or simply leave it as is.
-
-# Delete the local repository (optional):
-rm -rf <repository-folder>
