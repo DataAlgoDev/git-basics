@@ -1,4 +1,4 @@
-## Setup and startup
+## Setup and Startup
 
 *To initialize the selected folder as git working directory*
     
@@ -14,12 +14,13 @@
 
     git add .
 
-# Create user config before commiting files
+*Create user config before commiting files*
 
-git config --global user.email "ajaynarayanan11@gmail.com"
-git config --global user.name "AjayN"
+    git config --global --list
 
-git config --global --list
+    git config --global user.email "ajaynarayanan11@gmail.com"
+    git config --global user.name "AjayN"
+
 
 # Commiting files (Adding files to object folder, or saving)
 git commit -m "<message>" : Saves all the staged files(files that are being tracked in the index area)
