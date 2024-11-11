@@ -1,1 +1,1 @@
-Reference Repo for Git commands and Git knowledge :rocket:
+Reference Repo for Git commands and Git knowledge.
