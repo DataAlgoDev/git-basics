@@ -107,7 +107,7 @@ Name of the branch to be merged
 
 ## Deleting files
 
-To list the files present in staging alreadyi
+To list the files present in staging already
 
     git ls-files
 To remove file from direcory and staging already
