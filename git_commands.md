@@ -1,3 +1,68 @@
+Git is a distributed version control system used for multi-team collaboration and parallel development. It uses a branching model to allow developers to work in isolated environments. Instead of just isolating files, Git tracks snapshots of the entire project history, enabling individuals to develop features, fix bugs, or experiment independently without affecting the 'Source of Truth' (the main branch) until their code is ready to be merged.
+## Git Terms
+* **Remote:** A repo URL pointing to a hosted Git server (GitHub/Bitbucket) that allows you to sync local code with a central version of the repo.
+* **Fork:** - A copy of someone elses repository under your own account. Public repos are always forkable; private repos require owner permission.
+* **Upstream:** The "Source of Truth." In forking, it refers to the original author's repository. In branching, it refers to the remote branch your local branch tracks.
+* **Origin:** The default alias for the remote you directly push to. In a fork, `origin` is your copy; in a non-forked project, `origin` and the "Source of Truth" are the same thing.
+* **Fork Point:** The specific commit where a branch diverged from its parent. Git uses this during a rebase to identify which unique commits belong to the current branch.
+### Git data model
+Git is a directed acyclic graph (DAG) of snapshots, where each "commit" is a permanent record of the entire project state linked to its parent history, rather than a simple list of file changes.
+
+```
+(feature) [ f1 ]---[ f2 ]---[ f3 ]          ┌────────┐
+         /                    \             │  HEAD  │
+[ m1 ]---[ m2 ]----------------[ m3 ]-------│ [ m4 ] │ (main)
+           ^                    ^           └────────┘
+       FORK POINT          MERGE COMMIT
+
+                (Zooming into Node f2)
+┌──────────────────────────────────────────────────────────┐
+│                    COMMIT: 4a2b8c9                       │
+├──────────────────────────────────────────────────────────┤
+│ METADATA:                                                │
+│  - Author: User Name                                     │
+│  - Date:   14-05-2026                                    │
+│  - Message: "Update API"                                 │
+├──────────────────────────────────────────────────────────┤
+│ POINTERS:                                                │
+│  - Parent: [Hash of f1]                                  │
+│  - Tree:   [Snapshot of root file directory]             │
+└──────────────────────────────────────────────────────────┘
+```
+
+**Tree**: A directory listing that maps filenames and permissions to their corresponding Blobs or sub-directories.
+
+**Blob**: A binary large object model is a storage object containing only the raw file data (snapshot of a file) and is identified by its hash and not name.
+
+**Tag**: Tag is a permanent, human-readable alias for a specific commit mark some event or state like release or versioning.
+
+**Commit**: A Commit is a node containg a permanent snapshot of the project that links a Root Tree (the files) and metadata (author/message) to its parent commits, creating a traceable chain of history.
+
+**Branch**: Branch is a movable pointer created from a commit that automatically advances as new commits are added. This allows in isolating and tracking unique set of changes.
+
+* **main/master** :Main/Master is the default, primary branch that serves as the official "source of truth" for a project, typically holding the stable and production-ready code.
+
+**Head**: HEAD is a special pointer that points to any commit in a branch, typically to the tip of a branch (called an attached head). If pointing to a specific commit its known as a detached head. Head is like a lense that shows the user the snapshot of the commit in real time. All the commits are written where at the point where the head is at.
+
+**Attached head** : When new branch is created or when switches or checks out to a different branch head stays attached as it points to the tip of the branch.
+```
+git checkout <branch-name> or git switch <branch-name>
+```
+**Detached head** : Detached head occurs when we move to a specific commit. Any new commits added at this state will be temporary and will be orphaned once you switch to another branch
+```
+git checkout <commit-hash>
+```
+**Tip**: Tip is the latest commit of a branch
+
+* reset
+* Push, force, with lease
+* fast forward
+* Merge commit
+* Rebase and merge
+* Squash and merge
+* reflog
+* Worktree
+
 ## Setup and Startup
 ---
 *To initialize the selected folder as git working directory*
