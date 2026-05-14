@@ -40,7 +40,7 @@ Git is a directed acyclic graph (DAG) of snapshots, where each "commit" is a per
 
 **Branch**: Branch is a movable pointer created from a commit that automatically advances as new commits are added. This allows in isolating and tracking unique set of changes.
 
-* **main/master** :Main/Master is the default, primary branch that serves as the official "source of truth" for a project, typically holding the stable and production-ready code.
+**main/master** :Main/Master is the default, primary branch that serves as the official "source of truth" for a project, typically holding the stable and production-ready code.
 
 **Head**: HEAD is a special pointer that points to any commit in a branch, typically to the tip of a branch (called an attached head). If pointing to a specific commit its known as a detached head. Head is like a lense that shows the user the snapshot of the commit in real time. All the commits are written where at the point where the head is at.
 
@@ -225,10 +225,7 @@ To remove file from direcory and staging already
 
     git branch -D <branches name space seperated>
 
-### Detatched head
-
-When you go to a specific previous commit id, head becomes a detached head.
-To save the changes if switching to a different branch, create branch with that detatched head id and then merge
+ith that detatched head id and then merge
 
 ### Git Ignore
 
