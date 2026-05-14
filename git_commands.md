@@ -1,20 +1,15 @@
 Git is a distributed version control system used for multi-team collaboration and parallel development. It uses a branching model to allow developers to work in isolated environments. Instead of just isolating files, Git tracks snapshots of the entire project history, enabling individuals to develop features, fix bugs, or experiment independently without affecting the 'Source of Truth' (the main branch) until their code is ready to be merged.
 ## Git Terms
-* **Remote** 
 
-A repo URL pointing to a hosted Git server (GitHub/Bitbucket) that allows you to sync local code with a central version of the repo.
-* **Fork**
+***Remote :*** A repo URL pointing to a hosted Git server (GitHub/Bitbucket) that allows you to sync local code with a central version of the repo.
 
-A copy of someone elses repository under your own account. Public repos are always forkable; private repos require owner permission.
-* **Upstream**
+***Fork :*** A copy of someone elses repository under your own account. Public repos are always forkable; private repos require owner permission.
 
-The "Source of Truth." In forking, it refers to the original author's repository. In branching, it refers to the remote branch your local branch tracks.
-* **Origin**
+***Upstream :*** The "Source of Truth." In forking, it refers to the original author's repository. In branching, it refers to the remote branch your local branch tracks.
 
-The default alias for the remote you directly push to. In a fork, `origin` is your copy; in a non-forked project, `origin` and the "Source of Truth" are the same thing.
-* **Fork Point:**
+***Origin :*** The default alias for the remote you directly push to. In a fork, `origin` is your copy; in a non-forked project, `origin` and the "Source of Truth" are the same thing.
 
-The specific commit where a branch diverged from its parent. Git uses this during a rebase to identify which unique commits belong to the current branch.
+***Fork Point :*** The specific commit where a branch diverged from its parent. Git uses this during a rebase to identify which unique commits belong to the current branch.
 
 ### Git data model
 
@@ -42,69 +37,39 @@ Git is a directed acyclic graph (DAG) of snapshots, where each "commit" is a per
 └──────────────────────────────────────────────────────────┘
 ```
 
-**Tree**
+***Tree :*** A directory listing that maps filenames and permissions to their corresponding Blobs or sub-directories.
 
-A directory listing that maps filenames and permissions to their corresponding Blobs or sub-directories.
+***Blob :*** A binary large object model is a storage object containing only the raw file data (snapshot of a file) and is identified by its hash and not name.
 
-**Blob**
+***Tag :*** Tag is a permanent, human-readable alias for a specific commit mark some event or state like release or versioning.
 
-A binary large object model is a storage object containing only the raw file data (snapshot of a file) and is identified by its hash and not name.
+***Commit :*** A Commit is a node containg a permanent snapshot of the project that links a Root Tree (the files) and metadata (author/message) to its parent commits, creating a traceable chain of history.
 
-**Tag**
+***Branch :*** Branch is a movable pointer created from a commit that automatically advances as new commits are added. This allows in isolating and tracking unique set of changes.
 
-Tag is a permanent, human-readable alias for a specific commit mark some event or state like release or versioning.
+***main/master :*** Main/Master is the default, primary branch that serves as the official "source of truth" for a project, typically holding the stable and production-ready code.
 
-**Commit**
+***Head :*** HEAD is a special pointer that points to any commit in a branch, typically to the tip of a branch (called an attached head). If pointing to a specific commit its known as a detached head. Head is like a lense that shows the user the snapshot of the commit in real time. All the commits are written where at the point where the head is at.
 
-A Commit is a node containg a permanent snapshot of the project that links a Root Tree (the files) and metadata (author/message) to its parent commits, creating a traceable chain of history.
-
-**Branch**
-
-Branch is a movable pointer created from a commit that automatically advances as new commits are added. This allows in isolating and tracking unique set of changes.
-
-**main/master**
-
-Main/Master is the default, primary branch that serves as the official "source of truth" for a project, typically holding the stable and production-ready code.
-
-**Head**
-
-HEAD is a special pointer that points to any commit in a branch, typically to the tip of a branch (called an attached head). If pointing to a specific commit its known as a detached head. Head is like a lense that shows the user the snapshot of the commit in real time. All the commits are written where at the point where the head is at.
-
-**Attached head**
-
-When new branch is created or when switches or checks out to a different branch head stays attached as it points to the tip of the branch.
+***Attached head :*** When new branch is created or when switches or checks out to a different branch head stays attached as it points to the tip of the branch.
 ```
 git checkout <branch-name> or git switch <branch-name>
 ```
-**Detached head**
-
-Detached head occurs when we move to a specific commit. Any new commits added at this state will be temporary and will be orphaned once you switch to another branch
+***Detached head :*** Detached head occurs when we move to a specific commit. Any new commits added at this state will be temporary and will be orphaned once you switch to another branch
 ```
 git checkout <commit-hash>
 ```
-**Tip**
+***Tip :*** Tip is the latest commit of a branch
 
-Tip is the latest commit of a branch
+***Remote tracking branch :*** It is a local, read-only "bookmark" (like origin/main) that represents the state of a branch on a remote server at the time of your last git fetch or git pull
 
-**Remote tracking branch**
+***Git fetch :*** Git fetch downloads the latest commits, files, and branch pointers from a remote repository into your local "remote-tracking branches" (like origin/main) without merging them into your actual worki
 
-It is a local, read-only "bookmark" (like origin/main) that represents the state of a branch on a remote server at the time of your last git fetch or git pull
+***Git pull :*** Git pull is a two-in-one command that first runs git fetch to download the latest changes from the server and then immediately runs git merge to integrate those changes into your current local branch.
 
-**Git fetch**
+***Fast forward :*** Fast forward is a pointer update happens after merge 
 
-Git fetch downloads the latest commits, files, and branch pointers from a remote repository into your local "remote-tracking branches" (like origin/main) without merging them into your actual worki
-
-**Git pull**
-
-Git pull is a two-in-one command that first runs git fetch to download the latest changes from the server and then immediately runs git merge to integrate those changes into your current local branch.
-
-***Fast forward***
-
-Fast forward is a pointer update happens after merge 
-
-***Replay***
-
-A process that happens while rebasing, where the commit's parent changes due to it getting attached to a new parent causing its parent hash and commit hash to change, while blobs and trees remain almost same always.
+***Replay :*** A process that happens while rebasing, where the commit's parent changes due to it getting attached to a new parent causing its parent hash and commit hash to change, while blobs and trees remain almost same always.
 
 
 
