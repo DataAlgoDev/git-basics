@@ -98,11 +98,11 @@ Git fetch downloads the latest commits, files, and branch pointers from a remote
 
 Git pull is a two-in-one command that first runs git fetch to download the latest changes from the server and then immediately runs git merge to integrate those changes into your current local branch.
 
-**Fast forward**
+***Fast forward***
 
 Fast forward is a pointer update happens after merge 
 
-**Replay**
+***Replay***
 
 A process that happens while rebasing, where the commit's parent changes due to it getting attached to a new parent causing its parent hash and commit hash to change, while blobs and trees remain almost same always.
 
@@ -369,7 +369,6 @@ To remove file from direcory and staging already
 
     git branch -D <branches name space seperated>
 
-ith that detatched head id and then merge
 
 * ##### Git Ignore
 
